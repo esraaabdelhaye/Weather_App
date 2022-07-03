@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./imgs/176.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="place-info">
+            <p class="city"></p>
+            <p class="timezoon"></p>
+            <div class="time-hour">
+                <p class="date"></p>
+                <p class="time"></p>
+            </div>
+        </div>
+        <div class="icon-info">
+            <img class="icon" src="" alt="">
+            <div class="icon-description"></div>
+        </div>
+        <div class="temprature-info">
+            <p class="temprature"></p>
+            <p class="wind"></p>
+        </div>
+        <div class="inputs">
+            <input type="number" min="-90" max="90" class="lat" placeholder="latitude">
+            <input type="number" min="-180" max="180" class="long" placeholder="longitude">
+            <button class="sendInfo">Discover</button>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+
+
+</body>
+</html>

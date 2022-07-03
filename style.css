@@ -1,0 +1,155 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.3) , rgba(0,0,0,.3)) , url(./imgs/pexels-aleksandar-pasaric-325185.jpg);
+    background-position:center;
+    background-size: cover;
+    padding: 30px 50px;
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    width: 50vw;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.76);
+    color: white;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(2 , 1fr);
+    grid-template-areas: 'location icon'
+                         'temprature inputs';
+    padding: 30px;
+    gap: 50px;
+}
+
+.place-info{
+    grid-area: location;
+}
+
+.icon-info{
+    grid-area: icon;
+    text-align: center;
+}
+
+.temprature-info{
+    grid-area: temprature;
+}
+
+.city,.temprature {
+    color: rgb(255, 174, 0);
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.inputs{
+    grid-area: inputs;
+    height: fit-content;
+    display: grid;
+    grid-gap: 10px 5px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 'lat long'
+                         'button button';
+}
+
+.time-hour{
+    border:1px solid rgba(255, 174, 0, 0.479);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    padding:5px 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+
+
+.lat{
+    grid-area: lat;
+}
+.long{
+    grid-area: long;
+}
+
+.lat , .long{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    padding:1px 5px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.sendInfo{
+    grid-area: button;
+    background-color: rgba(255, 174, 0, 0.623);
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    color: white;
+    font-weight: 400;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+    padding: 5px;
+}
+
+.sendInfo:hover{
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+}
+
+@media (max-width:550px) {
+    .container{
+       width:95vw;
+       grid-gap: 10px;
+       height: fit-content;
+       grid-template-areas: 'icon'
+                            'location'
+                            'temprature'
+                            'inputs';
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 100%;
+        align-content: center;
+    }
+
+}
+
+@media (max-width:970px) {
+    body{
+        padding: 30px 10px;
+    }
+    .container{
+        width:500px;
+    }
+}
